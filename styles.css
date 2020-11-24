@@ -1,0 +1,453 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+body {
+    margin: 0;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+p {
+    font-size: 1.2rem;
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.dotted-hr{
+    border: dotted 6px white;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+/* For Mobile */
+[class*="col-"]{
+    width: 100%;
+}
+/*Navbar Start Here*/
+.navbar {
+    background-color: #40868b;
+    padding: 1% 7%;
+    text-align: center;
+}
+.navbar h1{
+    color: white;
+    margin: 0;
+    padding-top: 10px;
+}
+.nav-logo img{
+    width: 100px;
+    border-radius: 50%;
+    border: 1px white solid;
+}
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.nav-menu a{
+    background-color: #0c6168;
+    border-radius: 10px;
+    margin: 7px 0px;
+    padding: 10px;
+
+}
+.nav-menu a:hover{
+    background-color: gray;
+    color: orange;
+}
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* Navbar End Here */
+
+/* Profile Design Start Here */
+.profile {
+    padding: 150px 10px;
+    text-align: center;
+    position: relative;
+}
+.top-weather-icon{
+    width: 150px;
+}
+.profile .top-weather-icon {
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    transition: transform 2s;
+}
+.profile .top-weather-icon:hover{
+    transform: rotate(360deg);
+    transition-delay: .03s;
+
+}
+.profile-desc h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+}
+
+.profile-desc p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    text-align: center;
+    width: 90%;
+    margin: 0px auto 20px auto;
+    text-align: justify;
+}
+
+.bottom-weather-icon{
+    width: 150px;
+}
+.profile .bottom-weather-icon {
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+    transition: transform 2s;
+}
+.profile .bottom-weather-icon:hover{
+    transform: rotate(360deg);
+    transition-delay: .03s;
+
+}
+.profile::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+/* Profile Design End Here */
+
+/*About Me Design Start Here*/
+     
+.about-me {
+    background-color: #39a4ac;
+    padding: 1% 7%;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat',sans-serif;
+ 
+}
+
+.aboutme-image img {
+    margin-top: 10px;
+    width: 200px;
+    height: 220px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.about-me p{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.about-me a{
+    font-size: 1.2rem;
+}
+ .go-github-btn{
+     background-color: #052d2f;
+     color: white;
+     padding: 10px;
+     border-radius: 12px;
+     border: none;
+     font-size: 1rem;
+     text-align: center;
+     cursor: pointer;
+     margin: 10px;
+ }
+
+ .go-github-btn:hover{
+     
+     background-color: rgba(255, 99, 71, 0.671);
+ }
+ 
+.about-me::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/*About Me Design End Here*/
+
+/* Professional Experience Design Start Here */
+
+.professional-experience {
+    padding: 1% 0%;
+
+}
+
+.professional-experience .card {
+    background-color: #a39e9e;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s;
+    height: 700px;
+    
+}
+.card:hover{
+    box-shadow: 0px 4px 8px 5px black;
+}
+.card-icon {
+    text-align: center;
+    
+}
+.card-icon img{
+    background-color: tomato;
+    width: 100px;
+    margin-top: 20px;
+}
+
+
+.round-img {
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 15px;
+
+}
+.card-title h2 {
+    background-color: #616161;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px;
+
+}
+.skills-container {
+    padding-right: 45px;
+}
+
+.skills-container li {
+    list-style: none;
+    font-weight: bold;
+    margin: 30px 10px;
+    position: relative;
+}
+
+.skills-container li::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(86,86,153,.5);
+    width: 100%;
+    height: 15px;
+    top: calc(100% + 5px);
+    border-radius: 1000px;
+    left: 0px;
+}
+
+.skills-container li::after{
+    content: '';
+    position: absolute;
+    background-color: rgb(86,86,153,1);
+    width: 0%;
+    height: 15px;
+    top: calc(100% + 5px);
+    border-radius: 1000px;
+    left: 0px;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+
+.skills-container li.html::after {
+    animation-name: html;
+}
+@keyframes html {
+    to{
+        width: 90%;
+    }
+}
+
+.skills-container li.css::after {
+    animation-name: css;
+}
+@keyframes css {
+    to{
+        width: 80%;
+    }
+}
+.skills-container li.bootstrap::after {
+    animation-name: bootstrap;
+}
+@keyframes bootstrap {
+    to{
+        width: 85%;
+    }
+}
+
+
+
+.skills-container li.javascript::after {
+    animation-name: javascript;
+}
+@keyframes javascript {
+    to{
+        width: 75%;
+    }
+}
+
+.skills-container li.jquery::after {
+    animation-name: jquery;
+}
+@keyframes jquery {
+    to{
+        width: 65%;
+    }
+}
+
+.skills-container li.node::after {
+    animation-name: node;
+}
+@keyframes node {
+    to{
+        width: 70%;
+    }
+}
+
+.skills-container li.express::after {
+    animation-name: express;
+}
+@keyframes express {
+    to{
+        width: 60%;
+    }
+}
+
+.skills-container li.github::after {
+    animation-name: github;
+}
+@keyframes github {
+    to{
+        width: 80%;
+    }
+}
+
+.skills-container li.react::after {
+    animation-name: react;
+}
+@keyframes react {
+    to{
+        width: 60%;
+    }
+}
+.professional-experience::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/* Professional Experience Design End Here */
+
+
+/* achievement-contact-design-Start-here  */
+
+.achievement-contact {
+    padding: 1% 7%;
+    background-color: #39a4ac; 
+    color: white;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact input,textarea{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact button{
+    border: none;
+    background-color: #052d2f;
+    color: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.contact-links{
+    text-align: center;
+    width: 100%;
+}
+
+.media-buttons .btn{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color: white;
+}
+
+.btn:hover{
+    background-color: gray;
+}
+
+
+.achievement-contact::after{
+    content: '';
+    display: table;
+    clear: both;
+
+}
+ /* achievement-contact-design-End-here  */
+
+ /* Footer start from here*/
+ .footer-section{
+     background-color: black;
+     color: white;
+     padding: 20px;
+     text-align: center;
+     font-size: 0.8rem;
+ }
+
+ .footer-menu a {
+     display: block;
+     margin: 15px 0;
+     font-size: 1rem;
+ }
+
+ .footer-menu a:hover{
+     color: coral;
+ }
+
+ .footer-section::after{
+     content: '';
+     display: table;
+     clear: both;
+ }
+
+
+  /* Footer end from here*/
+
